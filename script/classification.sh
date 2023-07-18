@@ -1,0 +1,17 @@
+CUDA_VISIBLE_DEVICES=3 ~/anaconda3/envs/pytorch/bin/python main.py \
+--model DNN \
+--initial_dim 256 \
+--optimizer Adam \
+--lr 1e-3 \
+--warmup_steps 10 \
+--warmup_start_lr 1e-5 \
+--power 0.5 \
+--batchsize 12800 \
+--device cuda \
+--nonlin elu \
+--weight_decay 0. \
+--epochs 1000 \
+--save_dir ./Results/79sources/DNN-Adam-1000 \
+--dropout_rate 0. \
+--input_droprate 0. \
+-deterministic

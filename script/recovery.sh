@@ -1,0 +1,16 @@
+CUDA_VISIBLE_DEVICES=0 ~/anaconda3/envs/pytorch/bin/python RecoveryMain.py \
+--model DNN \
+--optimizer Adam \
+--lr 1e-3 \
+--warmup_steps 10 \
+--warmup_start_lr 1e-5 \
+--power 0.5 \
+--batchsize 10240 \
+--epochs 200 \
+--device cuda \
+--nonlin elu \
+--save_dir ./Results/Recover \
+--weight_decay 0. \
+--dropout_rate 0. \
+--input_droprate 0.1 \
+-deterministic
